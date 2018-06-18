@@ -1,0 +1,7 @@
+body{
+  width: 50%;
+  margin: 0 auto;
+  font-family: sans-serif;
+  max-width: 800px;
+  min-width: 480px;
+}
