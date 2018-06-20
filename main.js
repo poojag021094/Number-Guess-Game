@@ -12,8 +12,10 @@ var lowOrhigh = document.querySelector('.lowOrhigh');
 var guessCount = 1;
 var resetButton;
 
+//adding a Event Listener on Button in order to enable to Click functionality
 submitGuess.addEventListener('click',checkGuess);
 
+//checkGuess function
 function checkGuess(){
   var userGuess = Number(guessfield.value);
 
@@ -46,4 +48,14 @@ function checkGuess(){
   guessCount++;
   guessfield.value = ' ';
 
+}
+
+//setGameOver function
+function setGameOver(){
+  guessfield.disabled = true;
+  submitGuess.disabled = true;
+  resetButton = document.createElement('button');
+  resetButton.textContent = 'Start new game';
+  document.body.appendChild(resetButton);
+  resetButton.addEventListener('click',resetGame);
 }
