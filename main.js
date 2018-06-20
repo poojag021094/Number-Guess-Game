@@ -21,7 +21,7 @@ function checkGuess(){
 
   console.log(userGuess);
 
-   if(guessCount===1) {
+  if(guessCount===1) {
     guesses.textContent = 'Previous Count: ';
   }
   guesses.textContent += userGuess + ' ';
