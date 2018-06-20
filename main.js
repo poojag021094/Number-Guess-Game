@@ -47,6 +47,7 @@ function checkGuess(){
   }
   guessCount++;
   guessfield.value = ' ';
+  guessfield.focus();
 
 }
 
@@ -58,4 +59,24 @@ function setGameOver(){
   resetButton.textContent = 'Start new game';
   document.body.appendChild(resetButton);
   resetButton.addEventListener('click',resetGame);
+}
+
+//resetGame function
+function resetGame(){
+  guessCount = 1;
+
+  guessfield.disabled = false;
+  submitGuess.disabled = false;
+  guessfield.focus();
+  guessfield.value = ' ';
+
+  var resetparas = document.querySelectorAll('.result p');
+  for (var i = 0; i < resetparas.length; i++) {
+    resetparas[i].textContent = ' ';
+  }
+  lastresult.style.backgroundColor = 'white';
+
+  resetButton.parentNode.removeChild(resetButton);
+
+  randomNumber = Math.floor(Math.random()* 100) +1;
 }
