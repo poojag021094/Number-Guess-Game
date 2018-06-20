@@ -19,13 +19,16 @@ function checkGuess(){
 
   console.log(userGuess);
 
+   if(guessCount===1) {
+    guesses.textContent = 'Previous Count: ';
+  }
+  guesses.textContent += userGuess + ' ';
+
   if(userGuess === randomNumber){
     lastresult.textContent = 'Congratulations! You got it right!';
     lastresult.style.backgroundColor = 'green';
     lowOrhigh.textContent = ' ';
     setGameOver();
-  }else if (guessCount===1) {
-    guesses.textContent = 'Previous Count: ';
   }else if (guessCount ===10) {
     lastresult.textContent = 'Game Over';
     setGameOver();
@@ -40,7 +43,7 @@ function checkGuess(){
       lowOrhigh.textContent = 'Guess was High';
     }
   }
-  guesses.textContent += userGuess + ' ';
   guessCount++;
+  guessfield.value = ' ';
 
 }
