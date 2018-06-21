@@ -12,6 +12,8 @@ var lowOrhigh = document.querySelector('.lowOrhigh');
 var guessCount = 1;
 var resetButton;
 
+guessfield.focus();
+
 //adding a Event Listener on Button in order to enable to Click functionality
 submitGuess.addEventListener('click',checkGuess);
 

@@ -5,3 +5,9 @@ body{
   max-width: 800px;
   min-width: 480px;
 }
+.lastresult{
+  padding: 3px;
+}
+#guessfield{
+  focus;
+}
